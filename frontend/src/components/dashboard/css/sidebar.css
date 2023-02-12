@@ -1,0 +1,52 @@
+.sidebar {
+    box-shadow: 2px 0px 20px var(--color-purple);
+
+}
+.sidebar-menu {
+    height: 86vh;
+    position: relative;
+}
+.sidebar-menu a {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+    align-items: center;
+    height: 2.3rem;
+    margin-right: 2rem;
+    font-size: 16px;
+    transition: all 200ms ease;
+}
+.sidebar-menu a.logout{
+    position: absolute;
+    bottom: 2rem;
+    right: 0rem;
+   
+}
+.sidebar-menu a span {
+    order: 1;
+    transition: all 200ms ease;
+}
+.sidebar-menu a.active {
+    margin-right: 0;
+    width: 100%;
+    background-color: var(--color-purple);
+}
+.sidebar-menu a.active span {
+    margin-right: calc(2rem - 2px);
+}
+.sidebar-menu a.active::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height:100%;
+    margin-left: 0.5rem;
+    background-color: var(----color-sky);
+}
+.sidebar-menu a:hover {
+    color:var(--color-dark-blue);
+}
+.sidebar-menu a:hover span {
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,7 @@
+**/migrations
+Dockerfile
+.dockerignore
+media/
+env
+
+.gitignore

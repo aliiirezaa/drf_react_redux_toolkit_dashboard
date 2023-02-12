@@ -1,0 +1,8 @@
+
+.dashborad {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 20rem auto 14rem;
+    margin: 0 auto;
+}
+

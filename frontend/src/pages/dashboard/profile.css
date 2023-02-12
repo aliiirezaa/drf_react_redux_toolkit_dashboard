@@ -1,0 +1,210 @@
+.profile-container{
+   
+    border: 6px solid var(--color-white);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                 5px 5px 15px rgba(0, 0, 0, 0.35),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                inset  5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+.profile-container .thumbnail{
+    width: 100%;
+    direction: rtl;
+}
+.profile-container .thumbnail .img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid var(--color-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-container .thumbnail .img img,
+.profile-container .thumbnail .img input[type="file"],
+.profile-container .thumbnail .img svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.profile-container .thumbnail .img img,
+.profile-container .thumbnail .img svg{
+    z-index: 1;
+}
+.profile-container .thumbnail .img input[type="file"]{
+    z-index: 2;
+    opacity: 0;
+}
+.profile-container .buttons {
+    direction: rtl;
+}
+.profile-container .buttons button {
+    padding: 8px 12px;
+    border-radius: 10px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color: var(--color-white);
+    margin: 0 0.5rem;
+}
+.profile-container .buttons #submitButton {
+    background-color: var(--color-green);
+}
+.profile-container .buttons #changePasswordButton{
+    background-color: var(--color-rose);
+}
+.profile-container > ul li {
+    position: relative;
+    width: calc(50% - 10px);
+    height: 40px;
+    border-radius: 30px;
+    margin:1.5rem 5px ;
+  
+                
+}
+.profile-container > ul li:last-child{
+    width: 0;
+    height: max-content;
+    margin: 0;
+    box-shadow: 0;
+}
+
+.profile-container ul li input {
+    position: relative;
+   width: 100%;
+   height: 100%;
+   border: 1px solid var( --color-gray);
+   color: var(--color-purple);
+   outline: none;
+   direction: rtl;
+   padding: 12px 50px 12px 10px;
+   border-radius: 30px;
+   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+   transition: all 200ms ease
+}
+.profile-container > ul li span.user-icon{
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color-purple);
+    border-radius: 50%;
+}
+.profile-container > ul li span.user-icon .icon {
+    color: var(--color-purple);
+}
+.profile-container > ul li span.title {
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    color: var(--color-gray);
+    font-weight: 500;
+    padding: 10px 48px 12px 10px;
+    pointer-events: none;
+    transition: all 100ms ease;
+    
+}
+
+.profile-container > ul li input:focus ~ span.title,
+.profile-container > ul li input.check ~ span.title {
+    color: var(--color-purple);
+    font-size: 12px;
+    font-weight: 200;
+    padding: 0 8px;
+    transform: translateY(-12px)translateX(-30px);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-purple);
+    border-radius: 10px;
+}
+.profile-container > ul li input:focus,
+.profile-container > ul li input.check{
+    border-color: var(--color-purple);
+}
+
+.profile-container ul li.select-rols .role-container{
+    position: relative;
+    direction: rtl;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+.profile-container ul li.select-rols .role-container .header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: var(--color-white);
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+.profile-container ul li.select-rols .role-container .header span.icon-role {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-purple);
+  
+}
+.profile-container ul li.select-rols .role-container .header span.icon-role .icon {
+    transition: all 200ms ease-in;
+}
+.profile-container ul li.select-rols .role-container .header.open span.icon-role .icon{
+    transform: rotate(-180deg);
+}
+.profile-container ul li.select-rols .role-container .items-list{
+    margin-top: 0.5rem;
+    position: relative;
+    width: 250px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 0 14px;
+    cursor: pointer;
+    display: none;
+}
+.profile-container ul li.select-rols .role-container .header.open ~ .items-list {
+    display: block;
+}
+.profile-container ul li.select-rols .role-container .items-list li {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    padding: 10px 5px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+.profile-container ul li.select-rols .role-container .items-list li span.check-icon{
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--color-purple);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-container ul li.select-rols .role-container .items-list li span.check-icon .icon {
+    transform:scale(0);
+    transition: all 200ms ease-in;
+}
+.profile-container ul li.select-rols .role-container .items-list li.check span.check-icon .icon {
+    transform:scale(1);
+    color: var( --color-green);
+}

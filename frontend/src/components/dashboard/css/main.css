@@ -1,0 +1,53 @@
+
+.inside > div {
+    border-radius: 8px;
+    padding: 1.8rem;
+}
+.inside div .box-container h3 {
+    font-size: 22px;
+    text-align: right;
+}
+.inside div .box-container .box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+.inside div .box-container .box-content span svg,
+.inside div .box-container .box-content h2 {
+    color: var(--color-white) !important;
+    
+}
+.recent-blogify table {
+    direction: rtl;
+    box-shadow: 2px 0px 20px var(--color-purple);
+   
+}
+.recent-blogify table thead tr th,
+.recent-blogify table tbody tr td{
+    padding: 1rem 1.3rem;
+
+}
+.recent-blogify table thead tr th {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--color-purple) ;
+}
+.recent-blogify table tbody tr  {
+    border-bottom: 1px solid var(--color-purple) ;
+}
+.recent-blogify table tbody tr td span {
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    margin-left: 8px;
+}
+.recent-blogify table tbody tr td span[data-role='admin'] {
+    background-color: var( --color-yellow);
+}
+.recent-blogify table tbody tr td span[data-role='author'] {
+    background-color: var(--color-green);
+}
+.recent-blogify table tbody tr td span[data-role='user'] {
+    background-color: var(--color-zinc);
+}
+.recent-blogify table tbody tr:last-child {
+    border-bottom: none;
+}

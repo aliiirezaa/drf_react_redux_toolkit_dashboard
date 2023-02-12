@@ -1,0 +1,24 @@
+
+.paginatoins ul li{
+    position: relative;
+    margin: 0.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   
+    cursor: pointer;
+    border: 2px solid var(--color-purple);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+.paginatoins ul li:hover, 
+.paginatoins ul li.active {
+   border-color:var(--color-white) ;
+    background-color: var(--color-purple);
+    color: var(--color-white);           
+}
+
