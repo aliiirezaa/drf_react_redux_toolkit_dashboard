@@ -6,7 +6,7 @@ export const fetchUsers = async(AxiosPrivate) => {
 }
 
 export const addUser = async (AxiosPrivate, userData) => {
-  console.log(' receive data',userData )
+
   const config = {
     headers: {
         "Content-Type": "multipart/form-data",
@@ -17,7 +17,7 @@ export const addUser = async (AxiosPrivate, userData) => {
 }
 
 export const EidteUser = async (AxiosPrivate, userData) => {
-  console.log(' receive data', userData)
+
     const config = {
       headers: {
           "Content-Type": "application/x-www-form-urlencoded",

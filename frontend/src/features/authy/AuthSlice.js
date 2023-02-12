@@ -113,7 +113,7 @@ export const sendPasswordResetEmail = createAsyncThunk('user/sendPasswordResetEm
         return AuthServices.sendPasswordResetEmail(userData)
     }
     catch(error){
-      console.log(' response \n',error.response )
+    
         let message = "" 
         if(error?.response?.status == 500) {
             message = "خطایی در بخش سرور اتفاق افتاده است"
@@ -306,14 +306,14 @@ const AuthSlice = createSlice({
                 state.isLoading = true 
             })
             .addCase(sendPasswordResetEmail.fulfilled, (state, action) =>{
-              console.log(' receive data', action.payload.message )
+      
                 state.isLoading = false
                 state.isError = false
                 state.isSuucess = true 
                 state.message = action.payload.message
             })
             .addCase(sendPasswordResetEmail.rejected, (state, action)=>{
-                console.log(' receive data error reset', action.payload )
+              
                 state.isLoading = false
                 state.isSuucess = false
                 state.isError = true

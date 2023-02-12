@@ -101,7 +101,7 @@ const Login = () => {
     validateData()
 
     if (isValid()) {
-    console.log(userData )
+   
         dispatch(login(userData))
     }
   }

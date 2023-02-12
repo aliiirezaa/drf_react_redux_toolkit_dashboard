@@ -152,7 +152,6 @@ class UserCreateDetailEditeDeleteView(APIView):
     @parser_classes([FormParser])
     @permission_classes([IsAuthenticated, IsSuperuserOrOwner])
     def put(self, request, *args, **kwargs):
-        print(f'\n data: {request.data} \n')
         phone = kwargs.get('phone')
         admin = request.data.get('admin', None)
         employee = request.data.get('employee', None)

@@ -130,7 +130,7 @@ const Register = () => {
     validateData()
  
     if(isValid()){
-    console.log(' ',userData )
+
     dispatch(register(userData))
     }
   }

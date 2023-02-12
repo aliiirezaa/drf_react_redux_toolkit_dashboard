@@ -8,7 +8,6 @@ from datetime import timedelta
 
 @receiver(post_save, sender=OtpRequest)
 def checkout_times_expired(instance, created, *args, **kwargs):
-    print(f'\n signals  \n')
     if created:
         queries = OtpRequest.objects.filter(created__lt=timezone.now()-timedelta(minutes=2))
         if queries:

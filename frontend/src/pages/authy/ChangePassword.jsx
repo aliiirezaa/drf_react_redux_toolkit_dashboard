@@ -95,7 +95,7 @@ const ChnagePassword = () => {
         validateData()
 
         if (isValid()) {
-            console.log(' userData', userData)
+           
             dispatch(reset())
             dispatch(changePassword({AxiosPrivate, userData}))
 

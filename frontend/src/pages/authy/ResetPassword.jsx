@@ -97,7 +97,7 @@ const ResetPassword = () => {
     validateData()
 
     if (isValid()) {
-      console.log(' userData', userData)
+
       dispatch(reset())
       dispatch(confirmEmailPasswordReset({uid, token, userData}))
     }

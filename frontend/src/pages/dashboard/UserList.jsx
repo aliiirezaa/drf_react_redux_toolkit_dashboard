@@ -58,7 +58,7 @@ function UserList() {
     if (isSuccess && users?.length) {
       setListings(users)
       dispatch(reset())
-    console.log(' users:\n', users )
+
 
     }
 

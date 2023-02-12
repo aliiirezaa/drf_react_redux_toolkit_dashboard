@@ -204,14 +204,14 @@ function UserDetail() {
     }
     const roles = selectOptions.current.querySelectorAll('.check')
     if (roles.length > 0) {
-      console.log(' ',roles.length )
+
       for(let role of roles){
           if(!userData.roles.includes(role)) editeData[role.dataset.name] = true
       }
 
     }
     else {
-      console.log(' else....', )
+   
       editeData['admin'] = false
       editeData['employee'] = false
     }

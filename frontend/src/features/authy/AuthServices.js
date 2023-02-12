@@ -33,7 +33,7 @@ export const verify = async(userData) => {
 
 export const sendPasswordResetEmail = async(userData) => {
     const response = await axios.post('user/send/email/for/password/reset/', JSON.stringify(userData))
-  console.log(' reeeeeee', response)
+
     return response.data
 }
 

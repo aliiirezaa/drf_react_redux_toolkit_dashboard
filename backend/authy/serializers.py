@@ -3,7 +3,6 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes, smart_str, DjangoUnicodeDecodeError 
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from .send_email import send_email_message 
-from drf_extra_fields.fields import Base64ImageField
 from django.contrib.auth import get_user_model
 from .models import OtpRequest
 
